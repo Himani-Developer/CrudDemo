@@ -1,0 +1,29 @@
+
+
+
+
+<div class="container">
+<b>List of person details</b>
+<span style="color: red">{{error.errorMsg}}</span>
+<table class="table table-striped" border="1">
+	<thead><tr>
+		<th>Id</th>
+		<th>First name</th>
+		<th>Last name</th>
+		<th>Action</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="person in persons">
+		<td>{{person.id}}</td>
+		<td>{{person.firstname}}</td>
+		<td>{{person.lastname}}</td>
+		<td>  
+		<a href="#!/getperson/{{person.id}}"><span class="glyphicon glyphicon-info-sign"></span></a>
+		<a ng-click="deletePerson(person.id)"><span class="glyphicon glyphicon-trash"></span></a>
+		<a href="#!/getupdateform/{{person.id}}"><span class="glyphicon glyphicon-pencil"></span></a>
+		</td>
+	</tr>
+	</tbody>
+</table>
+</div>

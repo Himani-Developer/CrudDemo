@@ -1,0 +1,32 @@
+
+<span style="color: red">{{error.errorMsg}}</span>
+<form>
+	Enter first name:<input type="text" ng-model="person.firstname"><br>
+	Enter Last name:<input type="text" ng-model="person.lastname"><br>
+	Enter Email:<input type="email" ng-model="person.email"><br>
+	Enter Phone:<input type="text" ng-model="person.phonenumber">
+	<button ng-click="savePerson(person)">Add Person</button>
+
+</form>
+
+<div class="container">
+<b>List of Persons</b><br><br>
+
+<table class="table table-striped" border="1">
+	<thead><tr>
+		<th>Id</th>
+		<th>Firstname</th>
+		<th>Lastname</th>
+		
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="p in persons">
+		<td>{{p.id}}</td>
+		<td>{{p.firstname}}</td>
+		<td>{{p.lastname}}</td>
+		
+	</tr>
+	</tbody>
+</table>
+</div>
